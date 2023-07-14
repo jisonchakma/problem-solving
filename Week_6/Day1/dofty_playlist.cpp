@@ -16,7 +16,7 @@ void solve()
         }
     }
    // ll sum=0;
-    if(a.empty())
+    if(a.size()<K)
     {
         cout<<-1<<endl;
     }
