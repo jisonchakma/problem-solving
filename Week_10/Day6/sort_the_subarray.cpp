@@ -26,7 +26,7 @@ void solve()
         r=i;
         break;
     }
-    while(l-1>0&&b[l-1]<=b[l])
+    while(l-1>=0&&b[l-1]<=b[l])
     l--;
     while(r+1<n&&b[r+1]>=b[r])
     r++;
@@ -35,8 +35,8 @@ void solve()
     {
          if(b[i+1]<b[i])
          {
-         v.push_back({l,i});
-         l=i+1;
+           v.push_back({l,i});
+           l=i+1;
          }
     }
     v.push_back({l,r});
@@ -53,6 +53,7 @@ void solve()
 
     }
     cout<<l+1<<" "<<r+1<<"\n";
+    v.clear();
 }
 int main()
 {

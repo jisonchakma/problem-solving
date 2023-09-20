@@ -8,25 +8,25 @@ void solve()
     for(int i=0;i<n;i++)
     cin>>a[i];
     bool is_find=true;
-    int cnt=0;
+    int cnt=1;
     for(int i=0;i<n;i++)
     {
-        if(a[i]==0&&a[i+1]==0&&i>-1&&i+1<n)
+        if(a[i]==1)
         {
-            is_find=false;
-            break;
-        }
-        if(a[i]==1&&a[i+1]==1&&i>-1&&i+1<n)
-        {
+            if(i>0&&a[i-1]==1)
             cnt+=5;
+            else
+            cnt++;
         }
         else
-        cnt++;
-        
+        {
+            if(i>0&&a[i-1]==0)
+            {
+                cnt=-1;
+                break;
+            }
+        }
     }
-    if(is_find==false)
-    cout<<-1<<endl;
-    else
     cout<<cnt<<endl;
 }
 int main()

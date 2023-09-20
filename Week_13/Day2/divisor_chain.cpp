@@ -16,9 +16,9 @@ void solve()
         int dif=x-ans.back();
         for(int i=30;i>=0;i--)
         {
-            if(dif&(i<<i))
+            if(dif&(1<<i))
             {
-                ans.push_back(ans.back()+(i<<i));
+                ans.push_back(ans.back()+(1<<i));
             }
         }
     }
